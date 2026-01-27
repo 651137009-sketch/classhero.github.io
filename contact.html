@@ -2,59 +2,61 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ติดต่อเรา | ClassHero</title>
+  <title>ติดต่อ | ClassHero</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
 <nav>
-  <img src="assets/logo.png" alt="ClassHero">
+  <div style="display:flex; align-items:center;">
+    <a href="index.html">
+      <img src="assets/images/logo.png" alt="ClassHero Logo" style="height:40px;">
+    </a>
+  </div>
   <div>
     <a href="index.html">หน้าแรก</a>
     <a href="products.html">สินค้า</a>
-    <a href="packages.html">แพ็กเกจ</a>
+    <a href="about.html">เกี่ยวกับเรา</a>
     <a href="contact.html">ติดต่อ</a>
   </div>
 </nav>
 
-<section class="contact">
-  <h1>ติดต่อ / ขอ Demo</h1>
-  <p>สำหรับโรงเรียน ครู และหน่วยงานที่สนใจสื่อการเรียนรู้ ClassHero</p>
+<section>
+  <h1>ติดต่อเรา</h1>
+  <p>สนใจสื่อการเรียนรู้ หรือขอ Demo ใช้งาน</p>
 
-  <div class="contact-grid">
-
-    <!-- Google Form -->
-    <div>
-      <h3>ขอ Demo ฟรี</h3>
-      <a href="https://forms.gle/xxxxxxxx"
-         class="btn"
-         target="_blank">
-         เปิดแบบฟอร์มขอ Demo
-      </a>
+  <div class="cards">
+    <div class="card">
+      <h3>📧 อีเมล</h3>
+      <p>classhero.education@gmail.com</p>
     </div>
-
-    <!-- LINE -->
-    <div>
-      <h3>LINE Official</h3>
-      <img src="assets/line-qr.png" class="qr">
+    <div class="card">
+      <h3>📱 LINE</h3>
       <p>@classhero</p>
     </div>
-
-    <!-- Map -->
-    <div>
-      <h3>ที่ตั้ง</h3>
-      <iframe
-        src="https://www.google.com/maps?q=เชียงราย&output=embed"
-        width="100%"
-        height="250"
-        style="border:0;"
-        loading="lazy">
-      </iframe>
+    <div class="card">
+      <h3>🏫 สำหรับโรงเรียน</h3>
+      <p>สามารถติดต่อเพื่อขอทดลองใช้งานสื่อการเรียนรู้</p>
     </div>
+  </div>
 
+  <div style="margin-top:40px;">
+    <a href="#" style="
+      background:#1e3c72;
+      color:white;
+      padding:15px 30px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+    ">
+      ขอ Demo / สั่งซื้อ
+    </a>
   </div>
 </section>
+
+<footer>
+  © 2026 ClassHero Education
+</footer>
 
 </body>
 </html>
