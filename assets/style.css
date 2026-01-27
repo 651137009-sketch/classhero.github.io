@@ -46,7 +46,7 @@ nav a {
 section {
   max-width: 1100px;
   margin: auto;
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
 
 /* =====================
@@ -70,35 +70,90 @@ section {
 /* =====================
    Demo Section
 ===================== */
-.demo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Desktop: 3 รูป */
-  gap: 20px;
-  margin-top: 30px;
+.demo-section {
+  text-align: center;
 }
 
+.demo-section h2 {
+  font-size: 32px;
+}
+
+.demo-section p {
+  max-width: 720px;
+  margin: 10px auto 0;
+  color: #555;
+}
+
+/* Grid */
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Desktop: 3x2 */
+  gap: 24px;
+  margin-top: 40px;
+}
+
+/* Card */
 .demo-card {
   background: #fff;
-  border-radius: 16px;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  text-align: center;
-  transition: transform 0.3s ease;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
 }
 
 .demo-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.12);
 }
 
 .demo-card img {
   width: 100%;
-  height: 200px;
+  height: 210px;
   object-fit: cover;
 }
 
 .demo-card p {
-  padding: 12px;
+  padding: 14px;
   font-weight: 500;
+}
+
+/* =====================
+   Demo CTA Button
+===================== */
+.demo-cta {
+  margin-top: 60px;
+}
+
+.btn-demo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  padding: 20px 46px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  box-shadow: 0 14px 34px rgba(30, 60, 114, 0.35);
+  transition: all 0.3s ease;
+}
+
+.btn-demo span {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-top: 6px;
+}
+
+.btn-demo:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 22px 46px rgba(30, 60, 114, 0.45);
+}
+
+.btn-demo:active {
+  transform: scale(0.97);
 }
 
 /* =====================
@@ -122,7 +177,7 @@ footer {
   }
 
   .demo-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 รูป */
+    grid-template-columns: repeat(2, 1fr); /* 2x3 */
   }
 }
 
@@ -150,10 +205,6 @@ footer {
     font-size: 28px;
   }
 
-  .hero p {
-    font-size: 16px;
-  }
-
   .cards {
     grid-template-columns: 1fr;
   }
@@ -162,10 +213,17 @@ footer {
 /* Small Mobile */
 @media (max-width: 600px) {
   .demo-grid {
-    grid-template-columns: 1fr; /* 1 รูป */
+    grid-template-columns: 1fr;
   }
 
   .demo-card img {
     height: 180px;
+  }
+
+  .btn-demo {
+    width: 100%;
+    max-width: 360px;
+    padding: 16px 20px;
+    font-size: 18px;
   }
 }
