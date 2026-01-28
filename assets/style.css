@@ -84,7 +84,7 @@ section h2 {
 
 .product-image {
   width: 100%;
-  height: 220px;              /* 🔥 คุมขนาดรูป */
+  height: 729px;              /* 🔥 คุมขนาดรูป */
   object-fit: cover;          /* ไม่ยืด ไม่แตก */
   border-radius: 18px;
   display: block;
