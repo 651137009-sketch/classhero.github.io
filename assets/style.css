@@ -1,6 +1,10 @@
 /* =====================
    Base
 ===================== */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -15,13 +19,16 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 14px 24px;
   background: linear-gradient(135deg, #1e3c72, #2a5298);
-  flex-wrap: wrap;
+}
+
+nav img {
+  height: 40px;
 }
 
 nav a {
-  margin-left: 15px;
+  margin-left: 16px;
   text-decoration: none;
   font-weight: 500;
   color: #fff;
@@ -35,19 +42,19 @@ nav a:hover {
    Section
 ===================== */
 section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 64px 20px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
 }
 
+section h1,
 section h2 {
   text-align: center;
-  font-size: 32px;
   color: #1e3c72;
 }
 
 /* =====================
-   Cards Layout
+   Product Card
 ===================== */
 .cards.single {
   display: flex;
@@ -55,51 +62,43 @@ section h2 {
   margin-top: 40px;
 }
 
-.card.product-card {
+.product-card {
   background: #fff;
   width: 100%;
   max-width: 560px;
-  padding: 36px 32px;
-  border-radius: 24px;
+  padding: 32px;
+  border-radius: 26px;
   box-shadow: 0 18px 40px rgba(0,0,0,0.12);
-  transition: all 0.3s ease;
   text-align: center;
 }
 
-.card.product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 26px 56px rgba(0,0,0,0.16);
-}
-
 /* =====================
-   Image Frame (คุมขนาดจริง)
+   Image Frame
 ===================== */
 .image-frame {
   position: relative;
-  width: 100%;
-  max-width: 499px;        /* 🔥 ขนาด Desktop ตามสเปก */
+  max-width: 499px;
   margin: 0 auto 28px;
   padding: 6px;
-  border-radius: 24px;
+  border-radius: 26px;
   background: linear-gradient(135deg, #1e3c72, #ff9800);
 }
 
-/* รูปสินค้า */
 .product-image {
   width: 100%;
-  aspect-ratio: 499 / 729; /* 🔥 คุมสัดส่วนแท้ */
+  aspect-ratio: 499 / 729;
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: 20px;
   display: block;
   background: #000;
 }
 
-/* Glow effect */
+/* Glow */
 .image-frame::after {
   content: "";
   position: absolute;
   inset: -6px;
-  border-radius: 28px;
+  border-radius: 32px;
   background: linear-gradient(
     135deg,
     rgba(255,152,0,0.6),
@@ -113,12 +112,11 @@ section h2 {
 /* Badge */
 .badge {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 14px;
+  right: 14px;
   background: rgba(0,0,0,0.75);
   color: #fff;
   font-size: 12px;
-  font-weight: 600;
   padding: 6px 12px;
   border-radius: 20px;
 }
@@ -128,22 +126,21 @@ section h2 {
 ===================== */
 .product-card h3 {
   font-size: 26px;
-  color: #1e3c72;
   margin-bottom: 6px;
 }
 
-.product-card .topic {
+.topic {
   font-size: 18px;
   font-weight: 600;
   color: #ff9800;
   margin-bottom: 14px;
 }
 
-.product-card .desc {
+.desc {
   font-size: 15px;
   line-height: 1.7;
   color: #444;
-  margin-bottom: 26px;
+  margin-bottom: 28px;
 }
 
 /* =====================
@@ -157,12 +154,24 @@ section h2 {
 }
 
 .btn {
-  padding: 14px 28px;
+  padding: 14px 30px;
   border-radius: 40px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 16px;
-  transition: all 0.25s ease;
+  color: #fff;
+  transition: 0.25s;
+}
+
+.btn-demo {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.btn-buy {
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
 }
 
 /* =====================
@@ -179,11 +188,22 @@ footer {
    Responsive
 ===================== */
 @media (max-width: 768px) {
-  section h2 {
-    font-size: 26px;
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
-  .card.product-card {
-    padding: 26px 22px;
+  .product-card {
+    padding: 24px 20px;
+  }
+
+  .product-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
   }
 }
