@@ -424,3 +424,17 @@ footer {
   background: linear-gradient(135deg, #ff9800, #ff6f00);
   box-shadow: 0 8px 20px rgba(255,152,0,0.35);
 }
+/* =====================
+   Fix Image Size (Desktop & Tablet only)
+===================== */
+@media (min-width: 769px) {
+  .image-card img {
+    max-width: 420px;     /* 🔧 คุมขนาดรูปไม่ให้ใหญ่เกิน */
+    margin: 0 auto;       /* จัดรูปให้อยู่กึ่งกลาง */
+    display: block;
+  }
+
+  .image-row {
+    justify-items: center; /* จัด card ให้อยู่กลาง grid */
+  }
+}
