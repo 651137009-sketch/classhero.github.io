@@ -443,3 +443,28 @@ footer {
     max-width: 380px;
   }
 }
+/* =====================
+   REAL Fix Image Size (Desktop & Tablet)
+===================== */
+@media (min-width: 769px) {
+
+  /* คุมความกว้างของการ์ด */
+  .image-card {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  /* คุมรูปไม่ให้ล้น */
+  .image-card img {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* ปรับ grid ไม่ให้การ์ดยืดเกิน */
+  .image-row {
+    grid-template-columns: repeat(auto-fit, minmax(380px, max-content));
+    justify-content: center;
+  }
+}
