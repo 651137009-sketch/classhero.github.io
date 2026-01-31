@@ -438,3 +438,8 @@ footer {
     justify-items: center; /* จัด card ให้อยู่กลาง grid */
   }
 }
+@media (min-width: 1024px) {
+  .image-card img {
+    max-width: 380px;
+  }
+}
