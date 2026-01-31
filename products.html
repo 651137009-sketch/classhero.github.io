@@ -87,7 +87,9 @@
 
       <!-- ปุ่มกด -->
       <div class="product-actions">
-        <a href="#" class="btn btn-demo">🎥 ดูตัวอย่าง AR</a>
+        <a href="javascript:void(0)" class="btn btn-demo" onclick="openARModal()">
+  🎥 ดูตัวอย่าง AR
+</a>
         <a href="#" class="btn btn-buy">🛒 สั่งซื้อสินค้า</a>
       </div>
 
@@ -101,6 +103,21 @@
 <footer>
   © 2026 ClassHero Education
 </footer>
+<!-- =====================
+     AR QR Code Modal
+===================== -->
+<div id="arModal" class="ar-modal">
+  <div class="ar-modal-content">
+    <span class="ar-close" onclick="closeARModal()">×</span>
+
+    <h3>สแกนเพื่อดู AR</h3>
+    <p>ใช้กล้องมือถือสแกน QR Code ด้านล่าง</p>
+
+    <img src="assets/ar-qrcode.png" alt="AR QR Code" class="ar-qr">
+
+    <p class="ar-note">รองรับทั้ง iOS และ Android</p>
+  </div>
+</div>
 
 </body>
 </html>
