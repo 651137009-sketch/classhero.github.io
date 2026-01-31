@@ -118,6 +118,23 @@
     <p class="ar-note">รองรับทั้ง iOS และ Android</p>
   </div>
 </div>
+<script>
+  function openARModal() {
+    document.getElementById("arModal").style.display = "flex";
+  }
+
+  function closeARModal() {
+    document.getElementById("arModal").style.display = "none";
+  }
+
+  // คลิกพื้นหลังเพื่อปิด
+  window.addEventListener("click", function (e) {
+    const modal = document.getElementById("arModal");
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+</script>
 
 </body>
 </html>
