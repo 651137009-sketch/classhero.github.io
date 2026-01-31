@@ -394,3 +394,33 @@ footer {
     padding: 40px 15px;
   }
 }
+/* =====================
+   Product Actions - Desktop & Tablet Fix
+===================== */
+.product-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* ค่าเริ่มต้น (มือถือ) */
+.product-actions {
+  flex-direction: column;
+}
+
+/* แก้เฉพาะ Tablet + Desktop */
+@media (min-width: 768px) {
+  .product-actions {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-actions .btn {
+    min-width: 190px;      /* ทำให้ปุ่มกว้างเท่ากัน */
+    text-align: center;
+  }
+}
+.btn-buy {
+  background: linear-gradient(135deg, #ff9800, #ff6f00);
+  box-shadow: 0 8px 20px rgba(255,152,0,0.35);
+}
